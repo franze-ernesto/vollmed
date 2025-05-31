@@ -10,26 +10,26 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DadosEndereco {
-        @NotBlank
+        @NotBlank(message = "Rua é obrigatória")
         private String rua;
 
-        @NotBlank
+        @NotBlank(message = "Número é obrigatório")
         private String numero;
 
-        @NotBlank
+        @NotBlank(message = "Completo é obrigatório")
         private String complemento;
 
-        @NotBlank
+        @NotBlank(message = "Bairro é obrigatório")
         private String bairro;
 
-        @NotBlank
+        @NotBlank(message = "Cep é obrigatório")
         @Pattern(regexp = "\\d{9}")
         private String cep;
 
-        @NotBlank
+        @NotBlank(message = "Cidade é obrigatória")
         private String cidade;
 
-        @NotBlank
+        @NotBlank(message = "UF é obrigatória")
         private String uf;
 
 }
