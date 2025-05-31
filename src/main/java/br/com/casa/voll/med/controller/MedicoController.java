@@ -1,7 +1,5 @@
 package br.com.casa.voll.med.controller;
 
-import br.com.casa.voll.med.dto.DadosAtualizacaoMedico;
-import br.com.casa.voll.med.dto.DadosListagemMedico;
 import br.com.casa.voll.med.dto.DadosMedico;
 import br.com.casa.voll.med.model.Medico;
 import br.com.casa.voll.med.repository.MedicoRepository;
@@ -12,9 +10,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("medicos")

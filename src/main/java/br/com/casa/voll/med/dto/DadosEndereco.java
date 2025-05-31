@@ -2,22 +2,34 @@ package br.com.casa.voll.med.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public record DadosEndereco(
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class DadosEndereco {
         @NotBlank
-        String rua,
+        private String rua;
+
         @NotBlank
-        String numero,
+        private String numero;
+
         @NotBlank
-        String complemento,
+        private String complemento;
+
         @NotBlank
-        String bairro,
+        private String bairro;
+
         @NotBlank
         @Pattern(regexp = "\\d{9}")
-        String cep,
+        private String cep;
+
         @NotBlank
-        String cidade,
+        private String cidade;
+
         @NotBlank
-        String uf
-) {
+        private String uf;
+
 }
