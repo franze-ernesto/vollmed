@@ -51,17 +51,18 @@ Por padrão, o projeto utiliza o banco de dados **H2 em memória**.
 Caso prefira utilizar o MySQL, renomeie o arquivo `application-mysql.properties` para `application.properties` e atualize com suas credenciais:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/vollmed
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
-spring.jpa.hibernate.ddl-auto=update
+- spring.datasource.url=jdbc:mysql://localhost:3306/vollmed
+- spring.datasource.username=seu_usuario
+- spring.datasource.password=sua_senha
+- spring.jpa.hibernate.ddl-auto=update
 
-
+---
 
 ## 🧪 Testes
 
 > Em desenvolvimento – serão adicionados testes unitários e de integração futuramente.
 
+---
 
 ## 🚀 Como executar o projeto
 
@@ -76,7 +77,9 @@ git clone https://github.com/franze-ernesto/vollmed.git
 
     O projeto está em desenvolvimento contínuo.
 
-    As funcionalidades de pacientes ainda serão integradas. 
+    As funcionalidades de pacientes ainda serão integradas.
+
+---
 
 
 
