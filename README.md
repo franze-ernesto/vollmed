@@ -8,6 +8,7 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 - Spring Boot
 - Spring Data JPA
 - H2
+- MySQL
 - Lombok
 - ModelMapper
 - Jakarta Validation
@@ -15,6 +16,7 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 
 ## 📦 Estrutura de pacotes
 
+```
 br.com.casa.voll.med
 ├── config # Configurações globais do projeto
 ├── controller # Controladores REST (entrada de requisições)
@@ -23,7 +25,7 @@ br.com.casa.voll.med
 ├── enum # Enum
 ├── repository # Interfaces de persistência com Spring Data
 ├── service # Regras de negócio e lógica da aplicação
-
+```
 
 ## 🔄 Funcionalidades previstas
 
