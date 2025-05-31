@@ -1,6 +1,6 @@
 package br.com.casa.voll.med.controller;
 
-import br.com.casa.voll.med.dto.DadosMedico;
+import br.com.casa.voll.med.dto.MedicoRequestDTO;
 import br.com.casa.voll.med.model.Medico;
 import br.com.casa.voll.med.repository.MedicoRepository;
 import jakarta.transaction.Transactional;
@@ -18,30 +18,15 @@ public class MedicoController {
     private MedicoRepository medicoRepository;
 
     @PostMapping
-    @Transactional
-    public void cadastrar(@RequestBody @Valid DadosMedico dadosMedico) {
-        medicoRepository.save(new Medico(dadosMedico));
-    }
 
-    @GetMapping
-    public Page<DadosListagemMedico> listar(@PageableDefault(size=10, sort = {"nome"}) Pageable pageable) {
-        return medicoRepository.findAllByAtivoTrue(pageable)
-                .map(DadosListagemMedico::new);
-    }
 
-    @PutMapping
-    @Transactional
-    public void atualizar(@RequestBody @Valid DadosAtualizacaoMedico dadosMedico) {
-        var medico = medicoRepository.getReferenceById(dadosMedico.id());
-        medico.atualizarInformacoes(dadosMedico);
-    }
+    @GetMapping("/{id}")
+
+
+    @PutMapping("/{id}")
+
 
     @DeleteMapping("/{id}")
-    @Transactional
-    public void remover(@PathVariable Long id) {
-        var medico = medicoRepository.getReferenceById(id);
-        medico.excluirMedico();
 
-    }
 
 }

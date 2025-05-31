@@ -1,5 +1,6 @@
 package br.com.casa.voll.med.model;
 
+import br.com.casa.voll.med.enums.Especialidade;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,7 +24,8 @@ public class Medico {
     @Embedded
     private Endereco endereco;
 
-    private Boolean ativo;
+    @Column(nullable = false)
+    private Boolean ativo = true;
 
 }
 

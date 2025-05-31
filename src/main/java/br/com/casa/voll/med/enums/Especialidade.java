@@ -1,4 +1,4 @@
-package br.com.casa.voll.med.model;
+package br.com.casa.voll.med.enums;
 
 public enum Especialidade {
     DERMATOLOGIA,

@@ -1,6 +1,6 @@
 package br.com.casa.voll.med.dto;
 
-import br.com.casa.voll.med.model.Especialidade;
+import br.com.casa.voll.med.enums.Especialidade;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DadosMedico {
+public class MedicoRequestDTO {
         @NotBlank(message = "Nome é obrigatório")
         @Size(min = 3, max = 100, message = "Nome deve ter entre 3 e 100 caracteres")
         private String nome;
@@ -32,5 +32,5 @@ public class DadosMedico {
 
         @NotNull(message = "Endereço é obrigatório")
         @Valid
-        private DadosEndereco endereco;
+        private DadosEnderecoDTO endereco;
 }

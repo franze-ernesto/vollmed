@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DadosEndereco {
+public class DadosEnderecoDTO {
         @NotBlank(message = "Rua é obrigatória")
         private String rua;
 
