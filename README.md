@@ -50,7 +50,7 @@ Por padrão, o projeto utiliza o banco de dados **H2 em memória**.
 
 Caso prefira utilizar o MySQL, renomeie o arquivo `application-mysql.properties` para `application.properties` e atualize com suas credenciais:
 
-```properties
+properties
 - spring.datasource.url=jdbc:mysql://localhost:3306/vollmed
 - spring.datasource.username=seu_usuario
 - spring.datasource.password=sua_senha
