@@ -20,11 +20,11 @@ public class MedicoRequestDTO {
         private String email;
 
         @NotBlank(message = "Telefone é obrigatório")
-        @Pattern(regexp = "\\d{10,11}")
+        @Pattern(regexp = "\\d{10,11}", message = "CRM deve conter entre 10 e 11 dígitos numéricos")
         private String telefone;
 
         @NotBlank(message = "CRM é obrigatório")
-        @Pattern(regexp = "\\d{4,6}")
+        @Pattern(regexp = "\\d{4,6}", message = "CRM deve conter entre 4 e 6 dígitos numéricos")
         private String crm;
 
         @NotNull(message = "Especialidade é obrigatória")
