@@ -5,6 +5,7 @@ import br.com.casa.voll.med.dto.MedicoResponseDTO;
 import br.com.casa.voll.med.model.Medico;
 import br.com.casa.voll.med.repository.MedicoRepository;
 import br.com.casa.voll.med.exception.ObjectNotFoundException;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,6 +37,7 @@ public class MedicoService {
     }
 
     //cadastrar()
+    @Transactional
     public MedicoResponseDTO cadastrarMedico(MedicoRequestDTO dto) {
         Medico medico = modelMapper.map(dto, Medico.class);
         Medico medicoSalvo = medicoRepository.save(medico);

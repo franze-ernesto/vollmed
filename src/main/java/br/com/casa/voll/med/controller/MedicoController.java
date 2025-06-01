@@ -24,7 +24,6 @@ public class MedicoController {
 
 
     @PostMapping
-    @Transactional
     public ResponseEntity<MedicoResponseDTO> salvar(@RequestBody @Valid MedicoRequestDTO medicoRequestDTO) {
         return ResponseEntity.ok(medicoService.cadastrarMedico(medicoRequestDTO));
     }
