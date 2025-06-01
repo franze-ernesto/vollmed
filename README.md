@@ -16,13 +16,13 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 ## 📦 Estrutura de pacotes
 ```
 br.com.casa.voll.med
-├── config # Configurações globais do projeto
-├── controller # Controladores REST (entrada de requisições)
-├── dto # Objetos de transferência de dados (entrada e saída)
-├── model # Entidades JPA
-├── enum # Enum
-├── repository # Interfaces de persistência com Spring Data
-├── service # Regras de negócio e lógica da aplicação
+├── config 
+├── controller 
+├── dto 
+├── model 
+├── enum 
+├── repository 
+├── service 
 ```
 
 ## 🔄 Funcionalidades previstas
@@ -60,7 +60,7 @@ git clone https://github.com/franze-ernesto/vollmed.git
 
 2. cd vollmed
 
-3. Configure o BD H2 ou MySQL
+3. Configure o H2 ou MySQL
 
 4. 📌 Observações
 
