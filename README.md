@@ -1,8 +1,6 @@
 # Vollmed API
 API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e pacientes em uma clínica médica fictícia. O projeto utiliza boas práticas como DTOs, arquitetura em camadas, validações com Bean Validation e persistência de dados com JPA e MySQL.
 
---
-
 ## 🛠 Tecnologias utilizadas
 - Java 21
 - Spring Boot
@@ -13,9 +11,7 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 - ModelMapper
 - Jakarta Validation
 - Maven
-- Flyway
-  
---
+- Flyway  
 
 ## 📦 Estrutura de pacotes
 ```
@@ -28,7 +24,6 @@ br.com.casa.voll.med
 ├── repository # Interfaces de persistência com Spring Data
 ├── service # Regras de negócio e lógica da aplicação
 ```
---
 
 ## 🔄 Funcionalidades previstas
 - [x] Cadastro de médicos
@@ -38,8 +33,6 @@ br.com.casa.voll.med
 - [x] Busca de médicos por ID
 - [x] Validações de entrada (DTOs)
 - [x] Integração com banco de dados MySQL
-
---
 
 ## 💾 Banco de Dados
 Por padrão, o projeto utiliza o banco de dados **H2 em memória**.
@@ -58,12 +51,8 @@ properties
 - spring.datasource.password=sua_senha
 - spring.jpa.hibernate.ddl-auto=update
 
---
-
 ## 🧪 Testes
 > Em desenvolvimento – serão adicionados testes unitários e de integração futuramente.
-
---
 
 ## 🚀 Como executar o projeto
 1. Clone o repositório:
@@ -79,7 +68,7 @@ git clone https://github.com/franze-ernesto/vollmed.git
 
     As funcionalidades de pacientes ainda serão integradas.
 
---
+---
 
 
 
