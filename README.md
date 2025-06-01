@@ -4,14 +4,14 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 ## 🛠 Tecnologias utilizadas
 - Java 21
 - Spring Boot
-- Spring Data JPA
+- JPA/Hibernate
 - H2
-- MySQL
+- MySQL/Flyway  
 - Lombok
 - ModelMapper
 - Jakarta Validation
 - Maven
-- Flyway  
+- 
 
 ## 📦 Estrutura de pacotes
 ```
