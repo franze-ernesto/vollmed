@@ -12,6 +12,7 @@ create table medicos(
                         cep varchar(9) not null,
                         cidade varchar(100) not null,
                         uf char(2) not null,
+                        ativo boolean DEFAULT TRUE,
 
                         primary key (id)
 

@@ -52,12 +52,26 @@ public class MedicoService {
         return modelMapper.map(medicoAtualizado, MedicoResponseDTO.class);
     }
 
+    //atualizarParcialMedico()
+    public MedicoResponseDTO atualizarParcial(Long id, MedicoRequestDTO dto) {
+        Medico medico = medicoRepository.findById(id)
+                .orElseThrow(() -> new ObjectNotFoundException("Médico não encontrado com o id: " + id));
+        if (dto.getNome() != null) {medico.setNome(dto.getNome());}
+        if (dto.getEmail() != null) {medico.setEmail(dto.getEmail());}
+        if (dto.getCrm() != null) {medico.setCrm(dto.getCrm());}
+        if (dto.getEspecialidade() != null) {medico.setEspecialidade(dto.getEspecialidade());}
+
+        Medico medicoAtualizado = medicoRepository.save(medico);
+        return modelMapper.map(medicoAtualizado, MedicoResponseDTO.class);
+    }
+
+
     //deletarMedico()
     public void deletarMedico(Long id) {
         Medico medico = medicoRepository.findById(id)
                 .orElseThrow(() -> new ObjectNotFoundException("Médico não encontrado com o id: " + id));
         medico.setAtivo(false);
-        medicoRepository.delete(medico);
+        medicoRepository.save(medico);
     }
 
 
