@@ -8,6 +8,8 @@ import br.com.casa.voll.med.exception.ObjectNotFoundException;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,11 +24,9 @@ public class MedicoService {
     private ModelMapper modelMapper;
 
     //listarTodos()
-    public List<MedicoResponseDTO> listarTodosMedicos() {
-        return medicoRepository.findAll()
-                .stream()
-                .map(m -> modelMapper.map(m, MedicoResponseDTO.class))
-                .collect(Collectors.toList());
+    public Page<MedicoResponseDTO> listarTodosMedicos(Pageable pageable) {
+        return medicoRepository.findAll(pageable)
+                .map(m -> modelMapper.map(m, MedicoResponseDTO.class));
     }
 
     //listarPorId()
