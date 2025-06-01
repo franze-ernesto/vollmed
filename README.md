@@ -11,7 +11,6 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 - ModelMapper
 - Jakarta Validation
 - Maven
-- 
 
 ## 📦 Estrutura de pacotes
 ```
