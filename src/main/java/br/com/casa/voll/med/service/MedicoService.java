@@ -31,8 +31,7 @@ public class MedicoService {
 
     //listarPorId()
     public MedicoResponseDTO buscarMedicoPorId(Long id) {
-        Medico medico = medicoRepository.findById(id)
-                .orElseThrow(() -> new ObjectNotFoundException("Médico não encontrado com o id: " + id));
+        Medico medico = medicoRepository.getReferenceById(id);
         return modelMapper.map(medico, MedicoResponseDTO.class);
     }
 
