@@ -17,9 +17,10 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 br.com.casa.voll.med
 ├── config 
 ├── controller 
-├── dto 
+├── dto
+├── enums
+├── exception 
 ├── model 
-├── enum 
 ├── repository 
 ├── service 
 ```
