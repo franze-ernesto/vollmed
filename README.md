@@ -2,6 +2,8 @@
 
 API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e pacientes em uma clínica médica fictícia. O projeto utiliza boas práticas como DTOs, arquitetura em camadas, validações com Bean Validation e persistência de dados com JPA e MySQL.
 
+---
+
 ## 🛠 Tecnologias utilizadas
 
 - Java 21
@@ -14,6 +16,8 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 - Jakarta Validation
 - Maven
 - Flyway
+  
+---
 
 ## 📦 Estrutura de pacotes
 
@@ -27,6 +31,7 @@ br.com.casa.voll.med
 ├── repository # Interfaces de persistência com Spring Data
 ├── service # Regras de negócio e lógica da aplicação
 ```
+---
 
 ## 🔄 Funcionalidades previstas
 
@@ -38,6 +43,7 @@ br.com.casa.voll.med
 - [x] Validações de entrada (DTOs)
 - [x] Integração com banco de dados MySQL
 
+---
 
 ## 💾 Banco de Dados
 
