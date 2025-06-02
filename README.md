@@ -38,12 +38,12 @@ br.com.casa.voll.med
 - [x] Validações de entrada (DTOs)
 - [x] Integração com banco de dados MySQL
 
-##🎨 Layout
-- O layout da aplicação mobile está disponível neste link: [Figma](https://www.figma.com/design/N4CgpJqsg7gjbKuDmra3EV/Voll.med?node-id=2-1007&p=f)
+## 🎨 Layout
+> O layout da aplicação mobile está disponível neste link: [Figma](https://www.figma.com/design/N4CgpJqsg7gjbKuDmra3EV/Voll.med?node-id=2-1007&p=f)
 
 
-##📄 Documentação
-- A documentação das funcionalidades da aplicação pode ser acessada neste link: [Trello](https://trello.com/b/O0lGCsKb/api-voll-med)
+## 📄 Documentação
+> A documentação das funcionalidades da aplicação pode ser acessada neste link: [Trello](https://trello.com/b/O0lGCsKb/api-voll-med)
 
 
 ## 💾 Banco de Dados
