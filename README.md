@@ -5,7 +5,6 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos e
 - Java 21
 - Spring Boot
 - JPA/Hibernate
-- H2
 - MySQL/Flyway  
 - Lombok
 - ModelMapper
@@ -22,7 +21,8 @@ br.com.casa.voll.med
 ├── exception 
 ├── model 
 ├── repository 
-├── service 
+├── service
+├── user
 ```
 
 ## 🔄 Funcionalidades previstas
@@ -35,17 +35,8 @@ br.com.casa.voll.med
 - [x] Integração com banco de dados MySQL
 
 ## 💾 Banco de Dados
-Por padrão, o projeto utiliza o banco de dados **H2 em memória**.
-### ▶️ Acesso ao H2
-- Interface web: `http://localhost:8080/h2-console`
-- JDBC URL: `jdbc:h2:mem:testdb`
-- Usuário: `sa`
-- Senha: *(em branco)*
-
 ### 🔁 Usando MySQL
-Caso prefira utilizar o MySQL, renomeie o arquivo `application-mysql.properties` para `application.properties` e atualize com suas credenciais:
 
-properties
 - spring.datasource.url=jdbc:mysql://localhost:3306/vollmed
 - spring.datasource.username=seu_usuario
 - spring.datasource.password=sua_senha
