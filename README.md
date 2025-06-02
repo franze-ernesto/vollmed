@@ -71,7 +71,7 @@ git clone https://github.com/franze-ernesto/vollmed.git
 
     As funcionalidades de pacientes ainda serão integradas.
 
-##📝 Licença
+## 📝 Licença
 Projeto desenvolvido por Anderson Ernesto. Parte da estrutura inicial foi baseada em um curso da [Alura](http://alura.com.br). Este projeto evoluiu com a inclusão de DTOs, validações personalizadas, arquitetura em camadas, segurança aprimorada e entre outras coisas.
 
 
