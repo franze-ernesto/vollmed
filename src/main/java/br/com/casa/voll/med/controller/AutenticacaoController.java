@@ -1,6 +1,7 @@
 package br.com.casa.voll.med.controller;
 
 import br.com.casa.voll.med.dto.UsuarioRequestDTO;
+import br.com.casa.voll.med.security.TokenService;
 import br.com.casa.voll.med.user.Usuario;
 import br.com.casa.voll.med.user.UsuarioService;
 import org.modelmapper.ModelMapper;
@@ -20,12 +21,20 @@ public class AutenticacaoController {
     @Autowired
     private AuthenticationManager manager;
 
-    @PostMapping
-    public String efetuarLogin(@RequestBody UsuarioRequestDTO usuarioRequestDTO) {
-        var token = new UsernamePasswordAuthenticationToken(usuarioRequestDTO.getLogin(), usuarioRequestDTO.getSenha());
-        var autenticacao = manager.authenticate(token);
+    @Autowired
+    private TokenService tokenService;
 
-        return autenticacao.toString();
+    @PostMapping
+    public ResponseEntity<String> efetuarLogin(@RequestBody UsuarioRequestDTO usuarioRequestDTO) {
+        var token = new UsernamePasswordAuthenticationToken(
+                usuarioRequestDTO.getLogin(),
+                usuarioRequestDTO.getSenha()
+        );
+
+        var autenticacao = manager.authenticate(token);
+        var jwt = tokenService.gerarToken(autenticacao);
+
+        return ResponseEntity.ok(jwt);
 
     }
 }
