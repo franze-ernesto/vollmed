@@ -63,7 +63,7 @@ git clone https://github.com/franze-ernesto/vollmed.git
 
 2. cd vollmed
 
-3. Configure o H2 ou MySQL
+3. Configure o MySQL
 
 4. 📌 Observações
 
