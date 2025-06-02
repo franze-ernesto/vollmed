@@ -1,0 +1,31 @@
+package br.com.casa.voll.med.controller;
+
+import br.com.casa.voll.med.dto.UsuarioRequestDTO;
+import br.com.casa.voll.med.user.Usuario;
+import br.com.casa.voll.med.user.UsuarioService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/login")
+public class AutenticacaoController {
+
+    @Autowired
+    private AuthenticationManager manager;
+
+    @PostMapping
+    public String efetuarLogin(@RequestBody UsuarioRequestDTO usuarioRequestDTO) {
+        var token = new UsernamePasswordAuthenticationToken(usuarioRequestDTO.getLogin(), usuarioRequestDTO.getSenha());
+        var autenticacao = manager.authenticate(token);
+
+        return autenticacao.toString();
+
+    }
+}
