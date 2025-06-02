@@ -45,6 +45,7 @@ public class MedicoService {
     }
 
     //atualizarMedico()
+    @Transactional
     public MedicoResponseDTO atualizarMedico(Long id, MedicoRequestDTO dto) {
         Medico medico = medicoRepository.findById(id)
                 .orElseThrow(() -> new ObjectNotFoundException("Médico não encontrado com o id: " + id));
@@ -54,6 +55,7 @@ public class MedicoService {
     }
 
     //atualizarParcialMedico()
+    @Transactional
     public MedicoResponseDTO atualizarParcial(Long id, MedicoRequestDTO dto) {
         Medico medico = medicoRepository.findById(id)
                 .orElseThrow(() -> new ObjectNotFoundException("Médico não encontrado com o id: " + id));
@@ -68,6 +70,7 @@ public class MedicoService {
 
 
     //deletarMedico()
+    @Transactional
     public void deletarMedico(Long id) {
         Medico medico = medicoRepository.findById(id)
                 .orElseThrow(() -> new ObjectNotFoundException("Médico não encontrado com o id: " + id));
