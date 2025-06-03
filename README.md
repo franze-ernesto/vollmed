@@ -70,7 +70,7 @@ git clone https://github.com/franze-ernesto/vollmed.git
     O projeto está em desenvolvimento contínuo.   
 
 ## 📝 Licença
-Projeto desenvolvido por Anderson Ernesto. Parte da estrutura inicial foi baseada em um curso da [Alura](http://alura.com.br). Este projeto evoluiu com a inclusão de DTOs, validações personalizadas, arquitetura em camadas, segurança aprimorada e documentação.
+Projeto desenvolvido por Anderson Ernesto. Parte da estrutura inicial foi baseada em um curso da [Alura](http://alura.com.br). Este projeto evoluiu com a inclusão de DTOs, validações personalizadas, arquitetura em camadas, segurança e documentação.
 
 
 ---
