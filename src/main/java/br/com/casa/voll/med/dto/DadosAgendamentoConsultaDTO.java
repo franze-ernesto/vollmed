@@ -14,10 +14,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DadosAgendamentoConsultaDTO {
+    private Long idMedico;
+
     @NotNull
     private Long idPaciente;
-
-    private Long idMedico;
 
     @NotNull
     @Future

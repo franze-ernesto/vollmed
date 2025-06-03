@@ -9,9 +9,9 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class DadosDetalhamentoConsultaDTO {
+public class DadosAgendConsResponseDTO {
     private Long id;
-    private Long idMedico;
     private Long idPaciente;
-    private LocalDateTime data;
+    private Long idMedico;
+    private LocalDateTime dat;
 }

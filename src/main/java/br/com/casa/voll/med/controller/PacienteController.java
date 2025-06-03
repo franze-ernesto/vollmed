@@ -43,7 +43,7 @@ public class PacienteController {
         PacienteResponseDTO pacienteCadastrado = pacienteService.cadastrarPacientes(dto);
 
         var uri = uriBuilder.path("pacientes/{id}")
-                .buildAndExpand(pacienteCadastrado.id())
+                .buildAndExpand(pacienteCadastrado.getId())
                 .toUri();
 
         return ResponseEntity.created(uri).body(pacienteCadastrado);
