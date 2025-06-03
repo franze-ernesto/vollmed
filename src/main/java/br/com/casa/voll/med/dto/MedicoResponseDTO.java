@@ -14,5 +14,4 @@ public class MedicoResponseDTO {
     private String email;
     private String crm;
     private Especialidade especialidade;
-
 }

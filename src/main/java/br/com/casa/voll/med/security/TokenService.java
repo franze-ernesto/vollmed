@@ -25,6 +25,7 @@ public class TokenService {
 
 
     public String gerarToken(Authentication authentication) {
+        System.out.println("gerarToken");
 
         Usuario usuario = (Usuario) authentication.getPrincipal();
 

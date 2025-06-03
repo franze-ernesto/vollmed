@@ -25,13 +25,14 @@ public class MedicoService {
 
     //listarTodos()
     public Page<MedicoResponseDTO> listarTodosMedicos(Pageable pageable) {
-        return medicoRepository.findAll(pageable)
+        return medicoRepository.findAllByAtivoTrue(pageable)
                 .map(m -> modelMapper.map(m, MedicoResponseDTO.class));
     }
 
     //listarPorId()
     public MedicoResponseDTO buscarMedicoPorId(Long id) {
-        Medico medico = medicoRepository.getReferenceById(id);
+        Medico medico = medicoRepository.findByIdAndAtivoTrue(id)
+                .orElseThrow(() -> new ObjectNotFoundException("Médico não encontrado ou inativo com o id: " + id));
         return modelMapper.map(medico, MedicoResponseDTO.class);
     }
 
