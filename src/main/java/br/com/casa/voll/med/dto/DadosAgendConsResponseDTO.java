@@ -1,5 +1,6 @@
 package br.com.casa.voll.med.dto;
 
+import br.com.casa.voll.med.enums.Especialidade;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,5 +14,6 @@ public class DadosAgendConsResponseDTO {
     private Long id;
     private Long idPaciente;
     private Long idMedico;
-    private LocalDateTime dat;
+    private LocalDateTime data;
+
 }

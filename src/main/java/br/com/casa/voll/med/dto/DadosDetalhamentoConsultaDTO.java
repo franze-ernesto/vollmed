@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 public class DadosDetalhamentoConsultaDTO {
     private Long id;
     private Long idMedico;
+    private String nomeMedico;
     private Long idPaciente;
     private LocalDateTime data;
 }

@@ -1,5 +1,6 @@
 package br.com.casa.voll.med.dto;
 
+import br.com.casa.voll.med.enums.Especialidade;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -22,4 +23,10 @@ public class DadosAgendamentoConsultaDTO {
     @NotNull
     @Future
     private LocalDateTime data;
+
+    private String nomeMedico;
+
+    private Especialidade especialidade;
+
+
 }
