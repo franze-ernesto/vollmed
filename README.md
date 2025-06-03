@@ -30,12 +30,9 @@ br.com.casa.voll.med
 ```
 
 ## 🔄 Funcionalidades previstas
-- [x] Cadastro de médicos
-- [x] Atualização de médicos
-- [x] Exclusão lógica (soft delete)
-- [x] Listagem paginada de médicos
-- [x] Busca de médicos por ID
-- [x] Validações de entrada (DTOs)
+- [x] CRUD de médicos
+- [x] CRUD de pacientes
+- [x] Agendamento e consulta de Consultas Médicas
 - [x] Integração com banco de dados MySQL
 
 ## 🎨 Layout
