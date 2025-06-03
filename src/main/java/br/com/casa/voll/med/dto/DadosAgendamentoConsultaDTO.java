@@ -17,8 +17,7 @@ public class DadosAgendamentoConsultaDTO {
     @NotNull
     private Long idPaciente;
 
-    @NotBlank
-    private String nome;
+    private Long idMedico;
 
     @NotNull
     @Future
