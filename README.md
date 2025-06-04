@@ -1,5 +1,5 @@
-# Vollmed API
-API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos, pacientes e agendamento de consutas em uma clínica médica fictícia.
+# Vollmed API – Gerenciamento de Clínica Médica com Spring Boot
+API REST desenvolvida em Java com Spring Boot para gerenciamento de médicos, pacientes e agendamentos em uma clínica médica fictícia. O projeto simula um ambiente real de uma clínica com autenticação JWT, validações personalizadas e arquitetura baseada em DDD.
 
 ## 🛠 Tecnologias utilizadas
 - Java 21
@@ -43,45 +43,72 @@ src/main/java/br/com/casa/vollmed
 >Este projeto adota uma arquitetura orientada a DDD (Domain-Driven Design), priorizando a separação de responsabilidades entre as camadas, o encapsulamento das regras de negócio no domínio e a aplicação de boas práticas como autenticação via JWT e documentação com Swagger.
 
 ## 🔄 Funcionalidades previstas
-- [x] CRUD de médicos
-- [x] CRUD de pacientes
-- [x] Agendamento e consulta de Consultas Médicas
-- [x] Integração com banco de dados MySQL
+- [x] Cadastro, edição, listagem e exclusão de médicos
+- [x] Cadastro, edição, listagem e exclusão de pacientes
+- [x] Agendamento e cancelamento de consultas médicas
+- [x] Integração com banco de dados MySQL via JPA/Hibernate
 
 ## 🎨 Layout
-> O layout da aplicação mobile está disponível neste link: [Figma](https://www.figma.com/design/N4CgpJqsg7gjbKuDmra3EV/Voll.med?node-id=2-1007&p=f)
+O layout da aplicação mobile está disponível neste link:
+🔗 [Figma](https://www.figma.com/design/N4CgpJqsg7gjbKuDmra3EV/Voll.med?node-id=2-1007&p=f)
 
 
-## 📄 Documentação
-> A documentação das funcionalidades da aplicação pode ser acessada neste link: [Trello](https://trello.com/b/O0lGCsKb/api-voll-med)
 
+## 📄 Documentação das funcionalidades e planejamento de funcionalidade
+A documentação das funcionalidades da aplicação pode ser acessada neste link: 
+🔗 [Trello](https://trello.com/b/O0lGCsKb/api-voll-med)
 
-## 💾 Banco de Dados
-### 🔁 Usando MySQL
-
-- spring.datasource.url=jdbc:mysql://localhost:3306/vollmed
-- spring.datasource.username=seu_usuario
-- spring.datasource.password=sua_senha
-- spring.jpa.hibernate.ddl-auto=update
 
 ## 🧪 Testes
-> Em desenvolvimento – serão adicionados testes unitários e de integração futuramente.
+🔧 Em desenvolvimento:
+Testes unitários e de integração serão adicionados em breve.
 
 ## 🚀 Como executar o projeto
-1. Clone o repositório:
+```
+# Clone o repositório:
 git clone https://github.com/franze-ernesto/vollmed.git
 
-2. cd vollmed
+# Acesse o diretório do projeto:
+cd vollmed
 
-3. Configure o MySQL
+# Configure o MySQL conforme indicado abaixo e execute a aplicação com sua IDE ou via terminal:
 
-4. 📌 Observações
+#Execute a aplicação pela IDE ou com Maven:
+./mvnw spring-boot:run
+```
 
-    O projeto está em desenvolvimento contínuo.   
+## 💾 Configuração do Banco de Dados (MySQL)
+```
+```yaml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/vollmed
+    username: seu_usuario
+    password: sua_senha
+  jpa:
+    hibernate:
+      ddl-auto: update
+  jackson:
+    serialization:
+      indent_output: true
+```
 
 ## 📝 Licença
-Projeto desenvolvido por Anderson Ernesto. Parte da estrutura inicial foi baseada em um curso da [Alura](http://alura.com.br). Este projeto evoluiu com a inclusão de DTOs, validações personalizadas, arquitetura em camadas, segurança e documentação.
 
+Projeto desenvolvido por **Anderson Ernesto**. Parte da estrutura inicial foi baseada em um curso da [Alura](http://alura.com.br), com evoluções que incluem:
+
+- Separação de DTOs por entrada e saída
+
+- Regras de negócio isoladas e validadas dinamicamente
+
+- Arquitetura orientada a DDD (Domain-Driven Design)
+
+- Segurança com Spring Security e autenticação via JWT
+
+- Documentação via Swagger com Springdoc OpenAPI
+    
+
+Este projeto é para fins educacionais.
 
 ---
 
