@@ -4,6 +4,7 @@ import br.com.casa.voll.med.interfaces.web.dto.output.DadosAgendConsultaOutputDT
 import br.com.casa.voll.med.interfaces.web.dto.input.DadosAgendamentoConsultaDTO;
 import br.com.casa.voll.med.interfaces.web.dto.output.DadosDetalhamentoConsultaDTO;
 import br.com.casa.voll.med.application.service.ConsultaService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,6 +16,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("consultas")
+@SecurityRequirement(name = "bearer-key")
 public class ConsultaController {
 
     @Autowired
