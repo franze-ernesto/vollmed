@@ -79,7 +79,7 @@ cd vollmed
 
 ## 💾 Configuração do Banco de Dados (MySQL)
 ```
-```yaml
+yaml
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/vollmed
