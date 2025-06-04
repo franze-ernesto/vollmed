@@ -96,7 +96,7 @@ spring:
 ## 📝 Licença
 
 Projeto desenvolvido por **Anderson Ernesto**. Parte da estrutura inicial foi baseada em um curso da [Alura](http://alura.com.br), com evoluções que incluem:
-
+```
 - Separação de DTOs por entrada e saída
 
 - Regras de negócio isoladas e validadas dinamicamente
@@ -106,7 +106,7 @@ Projeto desenvolvido por **Anderson Ernesto**. Parte da estrutura inicial foi ba
 - Segurança com Spring Security e autenticação via JWT
 
 - Documentação via Swagger com Springdoc OpenAPI
-    
+```    
 
 Este projeto é para fins educacionais.
 
