@@ -14,7 +14,7 @@ API REST desenvolvida em Java com Spring Boot para o gerenciamento de médicos, 
 - Spring Security (com OAuth 2.0 / JWT para autenticação)
 - Springdoc OpenAPI (Swagger) para documentação automática da API
 
-## 📦 Estrutura de pacotes
+## 🧱 Arquitetura e Organização de Pacotes
 ```
 src/main/java/br/com/casa/vollmed
 ├── application
@@ -40,7 +40,7 @@ src/main/java/br/com/casa/vollmed
 └── config                     
 
 ```
->Este projeto segue uma arquitetura orientada a DDD (Domain-Driven Design), com foco na separação clara de responsabilidades, manutenção de regras de negócio no domínio e aplicação de boas práticas de autenticação e documentação (JWT + Swagger)
+>Este projeto adota uma arquitetura orientada a DDD (Domain-Driven Design), priorizando a separação de responsabilidades entre as camadas, o encapsulamento das regras de negócio no domínio e a aplicação de boas práticas como autenticação via JWT e documentação com Swagger.
 
 ## 🔄 Funcionalidades previstas
 - [x] CRUD de médicos
