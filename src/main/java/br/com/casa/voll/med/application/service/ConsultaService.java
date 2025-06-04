@@ -66,7 +66,7 @@ public class ConsultaService {
             throw new ValidacaoException("Paciente inativo ou não encontrado");
         }
 
-        validadores.forEach(v -> v.validar(dados));
+        validadores.forEach(v -> v.validar(agendamentoDTO));
 
         var consulta = new Consulta();
         consulta.setMedico(medicoDisponiveis.get(0));
