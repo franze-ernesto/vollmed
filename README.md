@@ -38,7 +38,6 @@ src/main/java/br/com/casa/vollmed
 │           └── output         
 │
 └── config                     
-
 ```
 
 > Este projeto adota uma arquitetura orientada a DDD (Domain-Driven Design), priorizando a separação de responsabilidades entre as camadas, o encapsulamento das regras de negócio no domínio e a aplicação de boas práticas como autenticação via JWT e documentação com Swagger.
@@ -76,44 +75,43 @@ Testes unitários e de integração serão adicionados em breve.
 ---
 
 ## 🚀 Como executar o projeto
+
 ### 📦 Clonando o projeto e gerando o `.jar`
 
 ```bash
-# Clone o repositório:
 git clone https://github.com/franze-ernesto/vollmed.git
-
-# Acesse o diretório:
 cd vollmed
-
-# Gere o .jar:
 ./mvnw clean package
-
 ```
 
-🧪 ## Executando o .jar localmente
-```
+### 🧪 Executando o `.jar` localmente
+
+```bash
 java -jar target/voll.med-0.0.1-SNAPSHOT.jar
-
 ```
 
-🐳 ## Execução com Docker
-📦 ## Construindo e executando localmente
-### Crie a imagem Docker:
-```
+---
+
+## 🐳 Execução com Docker
+
+### 📦 Construindo e executando localmente
+
+```bash
 docker build -t voll.med.app .
-```
-### Execute o container:
-```
 docker run -p 8080:8080 voll.med.app
 ```
-☁️ ## Executando via Docker Hub (sem necessidade de build local)
-```
+
+### ☁️ Executando via Docker Hub (sem necessidade de build local)
+
+```bash
 docker run -p 8080:8080 ernestofranze/vollmed-api:latest
 ```
 
+---
+
 ## 💾 Configuração do Banco de Dados (MySQL)
-```
-yaml
+
+```yaml
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/vollmed
@@ -127,25 +125,18 @@ spring:
       indent_output: true
 ```
 
+---
+
 ## 📝 Licença
 
 Projeto desenvolvido por **Anderson Ernesto**. Parte da estrutura inicial foi baseada em um curso da [Alura](http://alura.com.br), com evoluções que incluem:
+
 ```
 - Separação de DTOs por entrada e saída
-
 - Regras de negócio isoladas e validadas dinamicamente
-
 - Arquitetura orientada a DDD (Domain-Driven Design)
-
 - Segurança com Spring Security e autenticação via JWT
-
 - Documentação via Swagger com Springdoc OpenAPI
-```    
+```
 
-
-Este projeto é para fins educacionais.
-
----
-
-
-
+> Este projeto é para fins educacionais.
