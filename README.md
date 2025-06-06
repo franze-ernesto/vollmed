@@ -76,7 +76,6 @@ Testes unitários e de integração serão adicionados em breve.
 ---
 
 ## 🚀 Como executar o projeto
-
 ### 📦 Clonando o projeto e gerando o `.jar`
 
 ```bash
@@ -98,19 +97,15 @@ java -jar target/voll.med-0.0.1-SNAPSHOT.jar
 ```
 
 🐳 Execução com Docker
-
 📦 Construindo e executando localmente
-
 # Crie a imagem Docker:
 ```
 docker build -t voll.med.app .
 ```
-
 # Execute o container:
 ```
 docker run -p 8080:8080 voll.med.app
 ```
-
 ☁️ Executando via Docker Hub (sem necessidade de build local)
 ```
 docker run -p 8080:8080 ernestofranze/vollmed-api:latest
