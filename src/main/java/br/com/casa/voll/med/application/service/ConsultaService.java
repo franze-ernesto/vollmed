@@ -21,21 +21,20 @@ import java.util.List;
 @Service
 public class ConsultaService {
 
-    @Autowired
     private ConsultaRespository consultaRespository;
-
-    @Autowired
     private MedicoRepository medicoRepository;
-
-    @Autowired
     private PacienteRepository pacienteRepository;
-
-    @Autowired
     private ModelMapper modelMapper;
 
-    @Autowired
-    private List<ValidadorAgendamentoConsultas> validadores;
+    public ConsultaService(ConsultaRespository consultaRespository, MedicoRepository medicoRepository, PacienteRepository pacienteRepository, ModelMapper modelMapper, List<ValidadorAgendamentoConsultas> validadores) {
+        this.consultaRespository = consultaRespository;
+        this.medicoRepository = medicoRepository;
+        this.pacienteRepository = pacienteRepository;
+        this.modelMapper = modelMapper;
+        this.validadores = validadores;
+    }
 
+    private List<ValidadorAgendamentoConsultas> validadores;
 
     //consultarAgendamento()
     public Page<DadosDetalhamentoConsultaDTO> consultar(Pageable pageable) {
@@ -56,10 +55,10 @@ public class ConsultaService {
                 agendamentoDTO.getData(),
                 PageRequest.of(0, 1)
         );
+
         if (medicoDisponiveis.isEmpty()) {
             throw new ValidacaoException("Não há médicos disponíveis nessa especialidade para o horário escolhido.");
         }
-
 
         var pacienteOptional = pacienteRepository.findByIdAndAtivoTrue(agendamentoDTO.getIdPaciente());
         if (pacienteOptional.isEmpty()) {
@@ -77,4 +76,5 @@ public class ConsultaService {
 
         return modelMapper.map(consultaSalva, DadosAgendConsultaOutputDTO.class);
     }
+
 }

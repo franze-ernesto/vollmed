@@ -16,11 +16,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PacienteService {
-    @Autowired
-    private PacienteRepository pacienteRepository;
 
-    @Autowired
-    private ModelMapper modelMapper;
+    private final PacienteRepository pacienteRepository;
+    private final ModelMapper modelMapper;
+
+
+    public PacienteService(PacienteRepository pacienteRepository, ModelMapper modelMapper) {
+        this.pacienteRepository = pacienteRepository;
+        this.modelMapper = modelMapper;
+    }
 
     public Page<PacienteOutputDTO> listarTodosPacientes(Pageable pageable) {
         return pacienteRepository.findAll(pageable)
@@ -38,9 +42,7 @@ public class PacienteService {
         Paciente pacienteCadastrado = pacienteRepository.save(paciente);
 
         return modelMapper.map(pacienteCadastrado, PacienteOutputDTO.class);
-
     }
-
 
     public PacienteOutputDTO atualizarPacientesTotal(Long id, PacienteInputDTO dto) {
         Paciente paciente = pacienteRepository.findById(id)
@@ -49,7 +51,6 @@ public class PacienteService {
 
         return modelMapper.map(pacienteAtualizado, PacienteOutputDTO.class);
     }
-
 
     public PacienteOutputDTO atualizarPacientesParcial(Long id, PacienteInputDTO dto) {
         Paciente paciente = pacienteRepository.findById(id)
@@ -73,9 +74,7 @@ public class PacienteService {
         Paciente pacienteAtualizadoParcial = pacienteRepository.save(paciente);
 
         return modelMapper.map(pacienteAtualizadoParcial, PacienteOutputDTO.class);
-
     }
-
 
     public void excluirPaciente(Long id) {
         Paciente paciente = pacienteRepository.findById(id)

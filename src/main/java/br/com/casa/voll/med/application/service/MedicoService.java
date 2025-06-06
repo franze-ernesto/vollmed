@@ -1,29 +1,33 @@
 package br.com.casa.voll.med.application.service;
 
-import br.com.casa.voll.med.interfaces.web.dto.input.MedicoInputDTO;
-import br.com.casa.voll.med.interfaces.web.dto.output.MedicoOutputDTO;
+import br.com.casa.voll.med.application.exception.ObjectNotFoundException;
 import br.com.casa.voll.med.domain.model.Medico;
 import br.com.casa.voll.med.domain.repository.MedicoRepository;
-import br.com.casa.voll.med.application.exception.ObjectNotFoundException;
+import br.com.casa.voll.med.interfaces.web.dto.input.MedicoInputDTO;
+import br.com.casa.voll.med.interfaces.web.dto.output.MedicoOutputDTO;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MedicoService {
-    @Autowired
-    private MedicoRepository medicoRepository;
 
-    @Autowired
-    private ModelMapper modelMapper;
+    private final MedicoRepository medicoRepository;
+
+
+    private final ModelMapper modelMapper;
 
     //listarTodos()
     public Page<MedicoOutputDTO> listarTodosMedicos(Pageable pageable) {
         return medicoRepository.findAllByAtivoTrue(pageable)
                 .map(m -> modelMapper.map(m, MedicoOutputDTO.class));
+    }
+
+    public MedicoService(MedicoRepository medicoRepository, ModelMapper modelMapper) {
+        this.medicoRepository = medicoRepository;
+        this.modelMapper = modelMapper;
     }
 
     //listarPorId()
