@@ -15,8 +15,6 @@ import org.springframework.stereotype.Service;
 public class MedicoService {
 
     private final MedicoRepository medicoRepository;
-
-
     private final ModelMapper modelMapper;
 
     //listarTodos()
