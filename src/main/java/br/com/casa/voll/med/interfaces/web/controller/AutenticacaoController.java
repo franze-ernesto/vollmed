@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/auth/login")
 public class AutenticacaoController {
 
     private final AuthenticationManager manager;
@@ -35,6 +35,7 @@ public class AutenticacaoController {
         var autenticacao = manager.authenticate(token);
         var jwt = tokenService.gerarToken(autenticacao);
 
+        System.out.println("🔐 Token gerado: " + jwt);
         return ResponseEntity.ok(new DadosTokenJWT(jwt));
 
     }

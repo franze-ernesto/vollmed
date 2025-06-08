@@ -1,5 +1,6 @@
 package br.com.casa.voll.med.application.service;
 
+import br.com.casa.voll.med.domain.model.Usuario;
 import br.com.casa.voll.med.domain.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,6 +19,17 @@ public class AutenticacaoService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return usuarioRepository.findByLogin(username);
+        var usuario = (Usuario) usuarioRepository.findByLogin(username);
+
+        return usuario;
+
     }
+
+
+
+
+
+
+
+
 }
